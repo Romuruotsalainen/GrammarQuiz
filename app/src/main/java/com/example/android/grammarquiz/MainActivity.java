@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,14 +26,13 @@ public class MainActivity extends AppCompatActivity {
         EditText text = findViewById(R.id.open_question);
         EditText textTwo = findViewById(R.id.open_question_two);
 
-        String text_as_string = text.getText().toString().trim();
-        String text_as_string_two = textTwo.getText().toString().trim();
+        String textAsString = text.getText().toString().trim();
+        String textAsString_two = textTwo.getText().toString().trim();
 
-        if (text_as_string.equalsIgnoreCase("diglossia")) {
-            points += 3;
+        if (textAsString.equalsIgnoreCase("diglossia")) {
+            points += 2;
         }
-        if (text_as_string_two.equalsIgnoreCase("isogloss")) ;
-        {
+        if (textAsString_two.equalsIgnoreCase("isogloss")) {
             points += 3;
         }
     }
@@ -64,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void fetchStars() {
+        RatingBar stars = findViewById(R.id.stars);
+        if (stars.getRating() == 3) {
+            points += 1;
+        }
+    }
+
     //This function displays the score in a Toast
     public void postScore(View view) {
 
@@ -71,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         fetchNoun();
         fetchPronoun();
         openQuestion();
+        fetchStars();
 
         //This creates the Toast and shows it
         String cheer = "";

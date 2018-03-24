@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GrammarQuiz</string>
+    <string name="first_question">What do you call it when a community use different languages for different purpouses?</string>
+    <string name="second_question">An X is the border of a linguistic phenomenon. X=?</string>
 </resources>

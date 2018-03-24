@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
                 android:padding="16dp"
-                android:text="What do you call it when a community use different languages for different purpouses?" />
+                android:text="@string/first_question" />
 
             <EditText
                 android:id="@+id/open_question"
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
                 android:padding="16dp"
-                android:text="An X is the border of a linguistic phenomenon. X=? " />
+                android:text="@string/second_question" />
 
             <EditText
                 android:id="@+id/open_question_two"
@@ -178,11 +178,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="How did you like this quiz?" />
+                    android:text="How many articles does German nouns have?" />
 
                 <RatingBar
+                    android:id="@+id/stars"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:numStars="5"
                     android:paddingLeft="8dp" />
 
                 <LinearLayout
